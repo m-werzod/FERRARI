@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=569, initial-scale=1">
+  <title>Ferrari Service Landing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="images/ferrari_logo_icon_145829 1.png" alt="Ferrari logo" class="logo">
+        <ul class="menu">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#works">Наши работы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <span class="phone">+7 (999) 999-09-90</span>
+        <a href="tel:+79999990990" class="icon-btn">
+          <img src="./icons/whatsapp-2 2.png" alt="Phone" width="40" height="40">
+        </a>
+        <a href="https://t.me/" class="icon-btn" target="_blank">
+          <img src="./icons/telegram-3 1.png" alt="Telegram" width="40" height="40">
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main-content">
+      <div class="main-left">
+        <h1 class="main-title">ПРЕВОСХОДСТВО В ОБСЛУЖИВАНИИ</h1>
+        <p class="main-subtitle">Ваша машина в надежных руках!</p>
+        <a href="#order" class="cta-btn">ОСТАВИТЬ ЗАЯВКУ</a>
+        <div class="features">
+          <div class="feature">
+            <img src="images/Flag.png" alt="Italy" class="feature-icon">
+            <span>Специально обученные механики</span>
+          </div>
+          <div class="feature">
+            <img src="images/Karol.png" alt="Premium" class="feature-icon">
+            <span>Только премиум качество</span>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <img src="img/arrow-down-red.svg" alt="Scroll Down" class="arrow-icon">
+          <span>Листайте вниз</span>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="f812-label">F812 SUPER</div>
+        <img src="images/ferrarri.png" alt="Ferrari F812 Super" class="ferrari-car">
+        <img src="images/Ferari logotip.png" alt="Ferrari Shield Background" class="shield-bg">
+      </div>
+    </main>
+  </div>
+  <script>
+    // Optional: Animate scroll-down arrow
+    document.querySelector('.arrow-icon').animate([
+      { transform: 'translateY(0)' },
+      { transform: 'translateY(8px)' },
+      { transform: 'translateY(0)' }
+    ], {
+      duration: 1200,
+      iterations: Infinity
+    });
+  </script>
+</body>
+</html>
