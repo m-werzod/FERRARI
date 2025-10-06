@@ -41,4 +41,4 @@ function mergeSortedUniqueArrays(arr1, arr2) {
 
 const arr1 = [1, 3, 5, 7, 9];
 const arr2 = [2, 3, 5, 8, 10];
-console.log(mergeSortedUniqueArrays(arr1, arr2)); // Output: [1, 2, 3, 5, 7, 8, 9, 10]
+console.log(mergeSortedUniqueArrays(arr1, arr2)); 
