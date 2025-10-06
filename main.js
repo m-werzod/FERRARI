@@ -1,26 +1,44 @@
-// script.js (Simple hover effects, animated entry, beautiful details)
-document.addEventListener("DOMContentLoaded", () => {
-  // Animate cards on entry
-  const cards = document.querySelectorAll(".service-card");
-  cards.forEach((card, i) => {
-    card.style.opacity = 0;
-    card.style.transform = "translateY(40px) scale(0.96)";
-    setTimeout(() => {
-      card.style.transition = "opacity 0.5s cubic-bezier(.5,.2,.3,1), transform 0.5s cubic-bezier(.5,.2,.3,1)";
-      card.style.opacity = 1;
-      card.style.transform = "translateY(0) scale(1)";
-    }, 250 + i * 120);
-  });
+function mergeSortedUniqueArrays(arr1, arr2) {
+  let i = 0, j = 0;
+  const result = [];
 
-  // Optional: Ripple effect on click
-  cards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      const ripple = document.createElement("span");
-      ripple.className = "ripple";
-      ripple.style.left = e.offsetX + "px";
-      ripple.style.top = e.offsetY + "px";
-      card.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 520);
-    });
-  });
-});
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] === arr2[j]) {
+      if (result[result.length - 1] !== arr1[i]) {
+        result.push(arr1[i]);
+      }
+      i++;
+      j++;
+    } else if (arr1[i] < arr2[j]) {
+      if (result[result.length - 1] !== arr1[i]) {
+        result.push(arr1[i]);
+      }
+      i++;
+    } else {
+      if (result[result.length - 1] !== arr2[j]) {
+        result.push(arr2[j]);
+      }
+      j++;
+    }
+  }
+
+  while (i < arr1.length) {
+    if (result[result.length - 1] !== arr1[i]) {
+      result.push(arr1[i]);
+    }
+    i++;
+  }
+
+  while (j < arr2.length) {
+    if (result[result.length - 1] !== arr2[j]) {
+      result.push(arr2[j]);
+    }
+    j++;
+  }
+
+  return result;
+}
+
+const arr1 = [1, 3, 5, 7, 9];
+const arr2 = [2, 3, 5, 8, 10];
+console.log(mergeSortedUniqueArrays(arr1, arr2)); // Output: [1, 2, 3, 5, 7, 8, 9, 10]
